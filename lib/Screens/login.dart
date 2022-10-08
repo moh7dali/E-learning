@@ -20,7 +20,9 @@ class _LogInState extends State<LogIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Login page")),
+      appBar: AppBar(
+          title: Text("Login page"),
+          backgroundColor: Color.fromRGBO(11, 13, 52, 1)),
       body: SingleChildScrollView(
         child: Column(children: [
           SizedBox(
@@ -72,40 +74,38 @@ class _LogInState extends State<LogIn> {
             padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
             child: Text(
               "Forget Password ?",
-              style: GoogleFonts.bebasNeue(fontSize: 20, color: Colors.red),
+              style: GoogleFonts.nunito(fontSize: 20, color: Colors.red),
             ),
           ),
           Container(
             child: Text(
-              "Need An Account?Sign Up",
-              style: GoogleFonts.bebasNeue(fontSize: 20, color: Colors.blue),
+              "Need An Account ? Sign Up",
+              style: GoogleFonts.nunito(fontSize: 20, color: Colors.blue),
             ),
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 25, vertical: 25),
             child: ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    re_em = gettxt_email.text;
-                    re_pa = gettxt_pass.text;
-                    if (re_em == em && re_pa == pass) {
-                      Navigator.push(context, MaterialPageRoute(
-                        builder: (context) {
-                          return Home();
-                        },
-                      ));
-                    } else
-                      vis = true;
-                  });
-                },
-                child: Container(
-                  width: double.infinity,
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Login",
-                    style: GoogleFonts.bebasNeue(fontSize: 30),
-                  ),
-                )),
+              onPressed: () {
+                setState(() {
+                  re_em = gettxt_email.text;
+                  re_pa = gettxt_pass.text;
+                  if (re_em == em && re_pa == pass) {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return Home();
+                      },
+                    ));
+                  } else
+                    vis = true;
+                });
+              },
+              child: Text(
+                "Login",
+                style: GoogleFonts.nunito(fontSize: 25),
+              ),
+              style: ElevatedButton.styleFrom(minimumSize: Size(150, 50)),
+            ),
           ),
           Visibility(
             child: Text(

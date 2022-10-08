@@ -1,3 +1,4 @@
+import 'package:e_learning/Screens/login.dart';
 import 'package:e_learning/home.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -85,7 +86,7 @@ class _StartState extends State<Start> {
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(
                     builder: (context) {
-                      return Home();
+                      return LogIn();
                     },
                   ));
                 },

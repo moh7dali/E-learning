@@ -1,6 +1,7 @@
 import 'package:e_learning/Compoments/Materials.dart';
 import 'package:e_learning/Screens/Lesson.dart';
 import 'package:e_learning/Screens/Quizscreen/Quizscreen.dart';
+import 'package:e_learning/Screens/Startpage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -31,7 +32,7 @@ class _HomeState extends State<Home> {
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
-          children: const <Widget>[
+          children: [
             DrawerHeader(
               decoration: BoxDecoration(
                 color: Color.fromARGB(255, 255, 255, 255),
@@ -61,6 +62,22 @@ class _HomeState extends State<Home> {
                 style: TextStyle(fontSize: 18),
               ),
             ),
+            SizedBox(
+              height: 380,
+            ),
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return Start();
+                  },
+                ));
+              },
+              icon: Icon(Icons.logout),
+              label: Text("Log Out"),
+              style: ElevatedButton.styleFrom(
+                  primary: Color.fromARGB(255, 255, 47, 95)),
+            )
           ],
         ),
       ),

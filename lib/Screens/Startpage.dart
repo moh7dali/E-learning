@@ -26,77 +26,79 @@ class _StartState extends State<Start> {
               image: AssetImage("images/2.jpg"),
             ),
           ),
-          child: Column(children: [
-            Container(
-              width: 380,
-              height: 320,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                image: DecorationImage(
-                  fit: BoxFit.fitWidth,
-                  alignment: Alignment.center,
-                  image: NetworkImage(
-                      "https://i.pinimg.com/originals/b2/35/46/b235465842d78fb9d5736c2a759fd7a8.png"),
-                ),
-              ),
-            ),
-            Divider(
-              height: 130,
-            ),
-            Text(
-              "Nourish your ",
-              style: GoogleFonts.nunito(
-                fontWeight: FontWeight.bold,
-                fontSize: 30,
-                color: Colors.white,
-              ),
-            ),
-            Text(
-              "inner skills",
-              style: GoogleFonts.nunito(
-                fontWeight: FontWeight.bold,
-                fontSize: 30,
-                color: Colors.white,
-              ),
-            ),
-            Divider(
-              height: 10,
-            ),
-            Text(
-              "choose your favorite course and start learning",
-              style: GoogleFonts.nunito(
-                fontSize: 15,
-                color: Color.fromARGB(255, 167, 166, 166),
-              ),
-            ),
-            Divider(
-              height: 60,
-            ),
-            SizedBox(
-              height: 55,
-              width: 160,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+          child: SingleChildScrollView(
+            child: Column(children: [
+              Container(
+                width: 380,
+                height: 320,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  image: DecorationImage(
+                    fit: BoxFit.fitWidth,
+                    alignment: Alignment.center,
+                    image: NetworkImage(
+                        "https://i.pinimg.com/originals/b2/35/46/b235465842d78fb9d5736c2a759fd7a8.png"),
                   ),
-                  onPrimary: Color.fromARGB(255, 255, 255, 255),
-                  primary: Color.fromARGB(255, 255, 47, 95),
-                ),
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (context) {
-                      return LogIn();
-                    },
-                  ));
-                },
-                child: Text(
-                  "Lets Start",
-                  style: TextStyle(fontSize: 20),
                 ),
               ),
-            ),
-          ])),
+              Divider(
+                height: 130,
+              ),
+              Text(
+                "Nourish your ",
+                style: GoogleFonts.nunito(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 30,
+                  color: Colors.white,
+                ),
+              ),
+              Text(
+                "inner skills",
+                style: GoogleFonts.nunito(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 30,
+                  color: Colors.white,
+                ),
+              ),
+              Divider(
+                height: 10,
+              ),
+              Text(
+                "choose your favorite course and start learning",
+                style: GoogleFonts.nunito(
+                  fontSize: 15,
+                  color: Color.fromARGB(255, 167, 166, 166),
+                ),
+              ),
+              Divider(
+                height: 60,
+              ),
+              SizedBox(
+                height: 55,
+                width: 160,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    onPrimary: Color.fromARGB(255, 255, 255, 255),
+                    primary: Color.fromARGB(255, 255, 47, 95),
+                  ),
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return LogIn();
+                      },
+                    ));
+                  },
+                  child: Text(
+                    "Lets Start",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+              ),
+            ]),
+          )),
     );
   }
 }

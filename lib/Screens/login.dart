@@ -114,6 +114,21 @@ class _LogInState extends State<LogIn> {
             ),
             visible: vis,
           ),
+          TextButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return Home();
+                  },
+                ));
+              },
+              child: Text(
+                "Continue As guest",
+                style: GoogleFonts.nunito(
+                    fontSize: 20,
+                    color: Colors.blue.shade500,
+                    decoration: TextDecoration.underline),
+              ))
         ]),
       ),
     );
